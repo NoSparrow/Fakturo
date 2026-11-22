@@ -1,0 +1,87 @@
+@startuml klasy
+' Wstępny diagram klas – warstwa domenowa (Faktury.Core) – odzwierciedla prototyp w src/
+skinparam classAttributeIconSize 0
+hide empty methods
+
+class Kontrahent {
+  +Id : Guid
+  +Nazwa : string
+  +Nip : string?
+  +Ulica : string
+  +KodPocztowy : string
+  +Miejscowosc : string
+  +Email : string?
+  +NumerKonta : string?
+}
+
+class Faktura {
+  +Id : Guid
+  +Numer : string
+  +DataWystawienia : DateOnly
+  +DataSprzedazy : DateOnly
+  +TerminPlatnosci : DateOnly
+  +FormaPlatnosci : FormaPlatnosci
+  +Waluta : string
+  +PodstawaZwolnienia : string?
+  +NumerKsef : string?
+  +Podsumowanie : PodsumowanieFaktury
+}
+
+class PozycjaFaktury {
+  +Nazwa : string
+  +Jednostka : string
+  +Ilosc : decimal
+  +CenaNetto : decimal
+  +RabatProcent : decimal
+  +WartoscNetto : decimal
+  +KwotaVat : decimal
+  +WartoscBrutto : decimal
+}
+
+class StawkaVat <<record>> {
+  +Kod : string
+  +Procent : decimal
+  +JestLiczbowa : bool
+  {static} +Vat23, Vat8, Vat5, Vat0, Zwolniona, NiePodlega
+}
+
+class Produkt {
+  +Id : Guid
+  +Nazwa : string
+  +Jednostka : string
+  +CenaNetto : decimal
+  +Pkwiu : string?
+}
+
+class KalkulatorVat <<static>> {
+  +Podsumuj(pozycje) : PodsumowanieFaktury
+  +KwotaVatOdBrutto(brutto, stawka) : decimal
+}
+class WalidatorNip <<static>> {
+  +JestPoprawny(nip) : bool
+  +Formatuj(nip) : string
+}
+class WalidatorFaktury <<static>> {
+  +Sprawdz(faktura) : IReadOnlyList<string>
+}
+class GeneratorNumerow {
+  +Nastepny(data) : string
+  +UstawLicznik(rok, miesiac, nr)
+}
+interface IKsefClient {
+  +WyslijAsync(xmlFa3) : WynikWysylki
+  +PobierzUpoAsync(nrRef) : byte[]
+}
+class SymulatorKsef
+class KsefApiClient
+
+Faktura "1" --> "1" Kontrahent : sprzedawca
+Faktura "1" --> "1" Kontrahent : nabywca
+Faktura "1" *-- "1..*" PozycjaFaktury
+PozycjaFaktury --> StawkaVat
+PozycjaFaktury ..> Produkt : skopiowana z katalogu
+Faktura ..> KalkulatorVat
+WalidatorFaktury ..> WalidatorNip
+IKsefClient <|.. SymulatorKsef
+IKsefClient <|.. KsefApiClient
+@enduml

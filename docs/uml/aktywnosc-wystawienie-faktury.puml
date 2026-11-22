@@ -1,0 +1,42 @@
+@startuml aktywnosc-wystawienie-faktury
+title Wystawienie i wydruk faktury VAT
+
+start
+:Wybierz "Nowa faktura";
+:System proponuje numer i daty;
+:Wybierz lub dodaj nabywcę;
+
+while (Podany NIP niepoprawny?) is (tak)
+  :Pokaż błąd i popraw NIP;
+endwhile (nie)
+
+:Dodaj pozycje faktury
+(nazwa, ilość, cena, rabat, VAT);
+
+repeat
+  :Przelicz kwoty netto, VAT i brutto
+  oraz kwotę słownie;
+  :Wybierz "Zapisz i wystaw";
+  :Sprawdź poprawność faktury;
+
+  if (Są błędy?) then (tak)
+    :Pokaż błędy i popraw dane;
+  endif
+
+repeat while (Są błędy?) is (tak)
+->nie;
+
+:W jednej transakcji nadaj numer,
+zapisz fakturę i zwiększ licznik;
+
+if (Wygenerować PDF?) then (tak)
+  :Wygeneruj PDF;
+  if (Drukować?) then (tak)
+    :Wydrukuj fakturę;
+  else (nie)
+    :Otwórz podgląd PDF;
+  endif
+endif
+
+stop
+@enduml

@@ -1,0 +1,47 @@
+@startuml przypadki-uzycia
+' Diagram przypadków użycia – system "Fakturo" (wersja wstępna, Laboratorium 1)
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Właściciel firmy\n(wystawca)" as Wlasciciel
+actor "Sprzedawca" as Sprzedawca
+actor "Księgowa\n(biuro rachunkowe)" as Ksiegowa
+actor "Administrator" as Admin
+actor "KSeF\n(system zewnętrzny)" as KSeF <<system>>
+
+Wlasciciel <|-- Sprzedawca
+
+rectangle "Fakturo" {
+  usecase "PU-01 Zarządzaj kontrahentami" as PU01
+  usecase "PU-02 Zarządzaj katalogiem\nproduktów i usług" as PU02
+  usecase "PU-03 Wystaw fakturę VAT" as PU03
+  usecase "PU-04 Wygeneruj PDF\ni wydrukuj fakturę" as PU04
+  usecase "PU-05 Przeglądaj i wyszukuj\nfaktury" as PU05
+  usecase "PU-06 Oznacz fakturę\njako opłaconą" as PU06
+  usecase "PU-07 Eksportuj fakturę\ndo XML FA(3)" as PU07
+  usecase "PU-08 Wyślij fakturę do KSeF\n(środowisko testowe)" as PU08
+  usecase "PU-09 Skonfiguruj dane firmy\ni numerację" as PU09
+  usecase "PU-10 Wykonaj / przywróć\nkopię zapasową" as PU10
+  usecase "Zwaliduj NIP" as NIP
+  usecase "Oblicz VAT i sumy" as VAT
+}
+
+Wlasciciel --> PU01
+Wlasciciel --> PU02
+Wlasciciel --> PU03
+Wlasciciel --> PU04
+Wlasciciel --> PU05
+Wlasciciel --> PU06
+Wlasciciel --> PU08
+Ksiegowa --> PU05
+Ksiegowa --> PU04
+Ksiegowa --> PU07
+Admin --> PU09
+Admin --> PU10
+
+PU03 ..> NIP : <<include>>
+PU03 ..> VAT : <<include>>
+PU08 ..> PU07 : <<include>>
+PU08 --> KSeF
+@enduml
