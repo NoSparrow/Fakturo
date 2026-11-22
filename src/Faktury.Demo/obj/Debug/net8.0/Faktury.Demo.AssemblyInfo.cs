@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Faktury.Demo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f037d9dbc8dea1c3d881fd4b5cda845c720714b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c34aeea575288b5a0aad81ec3ac9e13269740699")]
 [assembly: System.Reflection.AssemblyProductAttribute("Faktury.Demo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Faktury.Demo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
