@@ -1,0 +1,94 @@
+@startuml erd
+' Wstępny diagram ERD (notacja "crow's foot") – baza SQLite programu Faktury
+hide circle
+skinparam linetype ortho
+
+entity "Firma" as Firma {
+  *id : INTEGER <<PK>>
+  --
+  *nazwa : TEXT
+  *nip : TEXT
+  *ulica, kod_pocztowy, miejscowosc : TEXT
+  numer_konta : TEXT
+  email, telefon : TEXT
+  zwolniony_z_vat : INTEGER (bool)
+  podstawa_zwolnienia : TEXT
+}
+
+entity "Kontrahent" as Kontrahent {
+  *id : INTEGER <<PK>>
+  --
+  *nazwa : TEXT
+  nip : TEXT
+  *ulica, kod_pocztowy, miejscowosc : TEXT
+  email, telefon : TEXT
+  aktywny : INTEGER (bool)
+}
+
+entity "Produkt" as Produkt {
+  *id : INTEGER <<PK>>
+  --
+  *nazwa : TEXT
+  *jednostka : TEXT
+  *cena_netto : NUMERIC
+  *stawka_vat : TEXT
+  pkwiu : TEXT
+}
+
+entity "Faktura" as Faktura {
+  *id : INTEGER <<PK>>
+  --
+  *numer : TEXT <<UNIQUE>>
+  *data_wystawienia : TEXT (ISO)
+  *data_sprzedazy : TEXT
+  *termin_platnosci : TEXT
+  *forma_platnosci : TEXT
+  *waluta : TEXT
+  *status : TEXT (robocza/wystawiona/oplacona)
+  *nabywca_id : INTEGER <<FK>>
+  *sprzedawca_snapshot : TEXT (JSON)
+  nabywca_snapshot : TEXT (JSON)
+  uwagi : TEXT
+  numer_ksef : TEXT
+  ksef_status : TEXT
+}
+
+entity "PozycjaFaktury" as Pozycja {
+  *id : INTEGER <<PK>>
+  --
+  *faktura_id : INTEGER <<FK>>
+  *lp : INTEGER
+  *nazwa : TEXT
+  *jednostka : TEXT
+  *ilosc : NUMERIC
+  *cena_netto : NUMERIC
+  *rabat_procent : NUMERIC
+  *stawka_vat : TEXT
+  produkt_id : INTEGER <<FK>>
+}
+
+entity "Numeracja" as Numeracja {
+  *id : INTEGER <<PK>>
+  --
+  *rok : INTEGER
+  *miesiac : INTEGER
+  *ostatni_numer : INTEGER
+  *prefiks : TEXT
+}
+
+entity "ZdarzenieKsef" as Zdarzenie {
+  *id : INTEGER <<PK>>
+  --
+  *faktura_id : INTEGER <<FK>>
+  *data_czas : TEXT
+  *typ : TEXT (wyslano/przyjeto/odrzucono)
+  nr_referencyjny : TEXT
+  upo_xml : TEXT
+  komunikat : TEXT
+}
+
+Kontrahent ||--o{ Faktura : "nabywca"
+Faktura ||--|{ Pozycja : "zawiera"
+Produkt |o--o{ Pozycja : "źródło (opcjonalnie)"
+Faktura ||--o{ Zdarzenie : "historia KSeF"
+@enduml
