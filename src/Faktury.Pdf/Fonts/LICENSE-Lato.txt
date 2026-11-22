@@ -1,0 +1,4 @@
+Czcionka Lato – Copyright (c) 2010-2011, Łukasz Dziedzic (dziedzic@typoland.com),
+z zastrzeżoną nazwą czcionki "Lato". Udostępniona na licencji SIL Open Font License 1.1
+(https://scripts.sil.org/OFL). Czcionka jest dołączona do programu, aby wizualizacja
+faktury była identyczna na Windows i Linux i zawierała polskie znaki diakrytyczne.

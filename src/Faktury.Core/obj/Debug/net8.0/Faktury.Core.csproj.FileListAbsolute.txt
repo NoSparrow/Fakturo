@@ -1,0 +1,12 @@
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/bin/Debug/net8.0/Faktury.Core.deps.json
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/bin/Debug/net8.0/Faktury.Core.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/bin/Debug/net8.0/Faktury.Core.pdb
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.AssemblyInfoInputs.cache
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.AssemblyInfo.cs
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.csproj.CoreCompileInputs.cache
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.sourcelink.json
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/refint/Faktury.Core.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/Faktury.Core.pdb
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/Debug/net8.0/ref/Faktury.Core.dll

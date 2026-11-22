@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GAM3r821cvwpQsw/AF4SbOOvFm/MiA1h7bcdWXP0Oysdu6Jr9kyDsZVMpXVmlX0JZAgsS3d1t0777x2KwURbng==",
+  "success": true,
+  "projectFilePath": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/Faktury.Pdf.csproj",
+  "expectedPackageFiles": [
+    "/home/marcin/.nuget/packages/questpdf/2026.9.1/questpdf.2026.9.1.nupkg.sha512"
+  ],
+  "logs": []
+}

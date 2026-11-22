@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/Faktury.Pdf.csproj": {}
+  },
+  "projects": {
+    "/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/Faktury.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/Faktury.Core.csproj",
+        "projectName": "Faktury.Core",
+        "projectPath": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/Faktury.Core.csproj",
+        "packagesPath": "/home/marcin/.nuget/packages/",
+        "outputPath": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/marcin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.134/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/Faktury.Pdf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/Faktury.Pdf.csproj",
+        "projectName": "Faktury.Pdf",
+        "projectPath": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/Faktury.Pdf.csproj",
+        "packagesPath": "/home/marcin/.nuget/packages/",
+        "outputPath": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/marcin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/Faktury.Core.csproj": {
+                "projectPath": "/home/marcin/Dokumenty/Fakturo/src/Faktury.Core/Faktury.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2026.9.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.134/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

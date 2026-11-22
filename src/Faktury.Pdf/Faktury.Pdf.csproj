@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Faktury.Pdf – wizualizacja faktury do PDF.
+    Używamy QuestPDF: biblioteka open source, działa identycznie na Windows i Linux
+    (renderuje przez Skia), ma licencję Community (bezpłatna dla osób prywatnych,
+    projektów open source i firm z przychodem < 1 mln USD rocznie).
+    Licencję trzeba jawnie ustawić w kodzie: QuestPDF.Settings.License = LicenseType.Community;
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Faktury.Pdf</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="QuestPDF" Version="2026.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Czcionka Lato (OFL 1.1) osadzona w bibliotece – gwarantuje polskie znaki i identyczny wygląd na każdym systemie. -->
+    <EmbeddedResource Include="Fonts\*.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Faktury.Core\Faktury.Core.csproj" />
+  </ItemGroup>
+
+</Project>

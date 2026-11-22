@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Faktury.Demo – aplikacja konsolowa demonstrująca prototyp (uruchom: dotnet run).
+    Tworzy przykładową fakturę z FIKCYJNYMI danymi, waliduje ją, liczy VAT i zapisuje PDF.
+    Opcje:  dotnet run - - -katalog ./wyjscie   dotnet run - - -otworz   dotnet run - - -drukuj
+  -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Faktury.Demo</RootNamespace>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Faktury.Core\Faktury.Core.csproj" />
+    <ProjectReference Include="..\Faktury.Pdf\Faktury.Pdf.csproj" />
+  </ItemGroup>
+
+</Project>

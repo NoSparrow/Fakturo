@@ -1,0 +1,17 @@
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/bin/Debug/net8.0/QuestPDF.Fonts.Lato.br
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/bin/Debug/net8.0/Faktury.Pdf.deps.json
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/bin/Debug/net8.0/Faktury.Pdf.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/bin/Debug/net8.0/Faktury.Pdf.pdb
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/bin/Debug/net8.0/Faktury.Core.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/bin/Debug/net8.0/Faktury.Core.pdb
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.csproj.AssemblyReference.cache
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.GeneratedMSBuildEditorConfig.editorconfig
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.AssemblyInfoInputs.cache
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.AssemblyInfo.cs
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.csproj.CoreCompileInputs.cache
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.sourcelink.json
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.csproj.CopyComplete
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/refint/Faktury.Pdf.dll
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/Faktury.Pdf.pdb
+/home/marcin/Dokumenty/Fakturo/src/Faktury.Pdf/obj/Debug/net8.0/ref/Faktury.Pdf.dll
